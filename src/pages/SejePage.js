@@ -6,7 +6,7 @@ import './SejePage.css'; // Dodajte to vrstico
 function SejePage() {
     //const navigate = useNavigate();
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    O
+    
     const userId = "322632"; // ID uporabnika, za katerega želite pridobiti vstopnice
     
     useEffect(() => {

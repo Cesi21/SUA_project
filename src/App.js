@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import RegisterPage from './pages/RegisterPage'; // Import the new component
 import TicketPage from './pages/TicketPage';
 import PaymentPage from './pages/PaymentPage';
-
+import NotificationPage from './pages/NotificationPage';
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/tickets" element={<TicketPage />} />
         <Route path="/seje" element={<SejePage/>} />
+        <Route path="/obvestila" element={<NotificationPage/>} />
         <Route path="/placilo/:ticketID" element={<PaymentPage/>} />
         {/* Dodajte dodatne poti tukaj */}
       </Routes>

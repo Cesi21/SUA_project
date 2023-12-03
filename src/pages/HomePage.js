@@ -1,23 +1,47 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link, useNavigate } from 'react-router-dom';
 import './HomePage.css';
+
 function HomePage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+ 
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Implement login logic here
-    console.log('Login Attempt:', username, password);
-  };
+  function LoginOK(ID) {
+    if (ID === "0000") {
+      alert('Napačno uporabniško ime ali geslo');
+    } else {
+      navigate(`/tickets/${ID}`);
+    }
+  }
+
+  function HandleSubmit() {
+    const userpass = username + "%" + password;
+
+    fetch(`https://localhost:7069/tickets/user/${userpass}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        
+        LoginOK(data.UserID);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        LoginOK("0000");
+      });
+  }
 
   return (
     <div>
       <h1>Dobrodošli na Dogodkotu!</h1>
       <p>Vpišite se v svoj uporabniški račun ali pa si ustvarite novega.</p>
-      
-      <form onSubmit={handleSubmit} class='formdiv'>
-      
+
+      <form className='formdiv'>
         <div>
           <label>Username:</label>
           <input
@@ -34,45 +58,11 @@ function HomePage() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Login</button>
-        {/* Register Button */}
+        <button type="button" onClick={HandleSubmit}>Login</button>
         <p>Ali ste nov uporabnik? <Link to="/register">Registriraj se</Link></p>
       </form>
       <img src='mitja_slikar.png' alt="AI-slika"></img>
     </div>
-
-
-
-//DISPLAY NEKI DOGODKI 
-
-
-
-
-
-
-/* Top spletna prodaja
-01
-STING
-02
-Siddharta - Prepovedana turneja 2024
-03
-SLOVENSKA MUSKA V STOŽICAH
-04
-FEJMIČI: SAMA STA NAJBOLJŠA
-05
-ŽIGOLO S.P. | DOMEN VALIČ
-06
-ROD STEWART
-07
-CEDEVITA OLIMPIJA - PARIS BASKETBALL
-08
-STRAST, DOJENČEK IN ROMPOMPOM
-09
-NINA PUŠLAR
-10
-IZNENADA SALOME
-*/
-
   );
 }
 

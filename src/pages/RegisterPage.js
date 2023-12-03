@@ -1,15 +1,41 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  function RegistrationOK(success) {
+    if (success) {
+      alert('Registracija uspešna');
+      navigate('/'); // Preusmeritev na prijavno stran
+    } else {
+      alert('Uporabnik že obstaja ali napaka pri registraciji');
+    }
+  }
+
+  function handleSubmit(event) {
     event.preventDefault();
-    // Implement registration logic here
-    console.log('Registration Attempt:', username, email, password);
-  };
+    const userData = { username, email, password };
+
+    fetch('https://localhost:7069/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then(response => response.json())
+      .then(data => {
+        RegistrationOK(data.success);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        RegistrationOK(false);
+      });
+  }
 
   return (
     <div>

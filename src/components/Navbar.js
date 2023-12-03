@@ -8,10 +8,10 @@ function Navbar() {
       <Link to="/events">Dogodki</Link>
       <Link to="/tickets">Vstopnice</Link>
       <Link to="/seje">Seje</Link>
-      <Link to="/events">Obvestila</Link>
+      {/*<Link to="/events">Obvestila</Link>
       <Link to="/events">Nastavitve</Link>
       <Link to="/events">Odjava</Link>
-      {/* Add additional navigation links here */}
+       Add additional navigation links here */}
     </nav>
   );
 }

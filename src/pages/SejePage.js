@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './SejePage.css'; // Dodajte to vrstico
-import { useNavigate } from 'react-router-dom';
+
+//import { useNavigate } from 'react-router-dom';
 
 function SejePage() {
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
+    O
     const userId = "322632"; // ID uporabnika, za katerega želite pridobiti vstopnice
     
     useEffect(() => {
@@ -24,10 +26,10 @@ function SejePage() {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('sl-SI', options);
     };
-    const handlePaymentClick = (ticketID) => {
+    //const handlePaymentClick = (ticketID) => {
         // Dodajte tukaj dodatno logiko, če je potrebno
       //  navigate(`/placilo/${ticketID}`);
-    };
+   // };
 
     return (
         <div>
@@ -43,7 +45,7 @@ function SejePage() {
                         <p className="ticket-detail"><strong>Konec:</strong> {formatDate(ticket.end)}</p>
                         <p className="ticket-detail"><strong>Organizator:</strong> {ticket.organizer}</p>
                         <p className="ticket-detail"><strong>Kontakt:</strong> {ticket.contact}</p>
-                        <button onClick={() => handlePaymentClick(ticket._id)}>Prikaži podrobnosti plačila</button>
+                        {/*<button onClick={() => handlePaymentClick(ticket._id)}>Prikaži podrobnosti plačila</button>*/}
                     </div>
                 ))}
             </div>

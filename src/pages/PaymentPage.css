@@ -1,0 +1,28 @@
+.payments-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+
+    
+}
+
+.payment-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pay-detail {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.pay-detail strong {
+    color: #333;
+}
+
+

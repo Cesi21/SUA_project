@@ -1,0 +1,110 @@
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\appsettings.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.exe
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.deps.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.runtimeconfig.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.pdb
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.AssemblyReference.cache
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.AssemblyInfoInputs.cache
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.AssemblyInfo.cs
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.CoreCompileInputs.cache
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.SUA_vstopnice.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.build.SUA_vstopnice.props
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SUA_vstopnice.props
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SUA_vstopnice.props
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\scopedcss\bundle\SUA_vstopnice.styles.css
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.CopyComplete
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\refint\SUA_vstopnice.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.pdb
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.genruntimeconfig.cache
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\ref\SUA_vstopnice.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\FirebaseAdmin.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Api.Gax.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Api.Gax.Rest.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\DnsClient.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Snappier.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\mitja\source\repos\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\OpenAPIs\api-docs.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\appsettings.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\OpenAPIs\api-docs.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.exe
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.deps.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.runtimeconfig.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SUA_vstopnice.pdb
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\DnsClient.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\FirebaseAdmin.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Api.Gax.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Api.Gax.Rest.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\SharpCompress.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Snappier.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.AssemblyReference.cache
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.AssemblyInfoInputs.cache
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.AssemblyInfo.cs
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.CoreCompileInputs.cache
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.SUA_vstopnice.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.build.SUA_vstopnice.props
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SUA_vstopnice.props
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SUA_vstopnice.props
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\scopedcss\bundle\SUA_vstopnice.styles.css
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.csproj.CopyComplete
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\refint\SUA_vstopnice.dll
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.pdb
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\SUA_vstopnice.genruntimeconfig.cache
+C:\Users\kristjan.herodez\OneDrive - Univerza v Mariboru\Magister\1. mletnik\SUA_\Projekt\GitPorjekt\SUA_proejct-main\Vstopnice_storitve\SUA_vstopnice\SUA_vstopnice\obj\Debug\net6.0\ref\SUA_vstopnice.dll

@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 function TicketPage() {
     const navigate = useNavigate();
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = "322632"; // ID uporabnika, za katerega želite pridobiti vstopnice
-    
+    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
+    //console.log(userId);
     useEffect(() => {
         fetch(`https://localhost:7069/tickets/user/${userId}`, {
             method: 'GET',

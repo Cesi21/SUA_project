@@ -1,41 +1,48 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function RegisterPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  
+  const [geslo, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const [ime, setIme] = useState('');
+  const [priimek, setPri] = useState('');
+  const [vloga, setVloga] = useState('');
+  const [_id, setId] = useState('');
+  const [prijavljeniDogodki, setP] = useState('');
   const navigate = useNavigate();
 
-  function RegistrationOK(success) {
-    if (success) {
-      alert('Registracija uspešna');
-      navigate('/'); // Preusmeritev na prijavno stran
-    } else {
-      alert('Uporabnik že obstaja ali napaka pri registraciji');
-    }
-  }
-
-  function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const userData = { username, email, password };
-
-    fetch('https://localhost:7069/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        RegistrationOK(data.success);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        RegistrationOK(false);
+    setVloga("obiskovalec");
+    setId("btk");
+    setP("btk");
+    const userData = { _id,ime, priimek,email, geslo, vloga,prijavljeniDogodki };
+    console.log(userData);
+    try {
+      const response = await fetch('http://localhost:5000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
       });
-  }
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success('Registracija uspešna');
+        navigate('/'); // Preusmeritev na prijavno stran
+      } else {
+        toast.error(data.message || 'Uporabnik že obstaja ali napaka pri registraciji');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Napaka pri komunikaciji s strežnikom');
+    }
+  };
 
   return (
     <div>
@@ -50,23 +57,33 @@ function RegisterPage() {
           />
         </div>
         <div>
-          <label>Uporabniško ime:</label>
+          <label>Ime:</label>
           <input
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={ime}
+            onChange={(e) => setIme(e.target.value)}
           />
         </div>
+        <div>
+          <label>Priimek:</label>
+          <input
+            type="text"
+            value={priimek}
+            onChange={(e) => setPri(e.target.value)}
+          />
+        </div>
+        
         <div>
           <label>Geslo:</label>
           <input
             type="password"
-            value={password}
+            value={geslo}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button type="submit">Registriraj se</button>
       </form>
+      <ToastContainer />
     </div>
   );
 }

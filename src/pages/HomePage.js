@@ -1,69 +1,81 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './HomePage.css';
+import { ToastContainer, toast } from 'react-toastify';
+import { Link } from 'react-router-dom'; // Dodajte ta uvoz
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
+
+ let res = 0;
 function HomePage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
- 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
+    const [email, setUsername] = useState('');
+    const [geslo, setPassword] = useState('');
+    
 
-  function LoginOK(ID) {
-    if (ID === "0000") {
-      alert('Napačno uporabniško ime ali geslo');
-    } else {
-      navigate(`/tickets/${ID}`);
-    }
-  }
+    const handleSubmit = async () => { // Popravite ime funkcije tukaj
+        try {
+            const response = await fetch('http://localhost:5500/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, geslo }),
+            });
+            res = response.status;
+           
 
-  function HandleSubmit() {
-    const userpass = username + "%" + password;
+            const data = await response.json();
+           
+            
+            if (response.ok) {
+                localStorage.setItem('jwtToken', data.token);
+                localStorage.setItem('userID', email);
+                console.log('JWT Token:', data.token);
+                navigate(`/tickets`);
+            }
+             
+        } catch (error) {
+          
+          if(res === 401)
+            {
+              toast.error('Prijava ni uspela');
+              
+            }else{
+              toast.error('Napaka pri komunikaciji s strežnikom');
+            }
+        }
+    };
 
-    fetch(`https://localhost:7069/tickets/user/${userpass}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        
-        LoginOK(data.UserID);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        LoginOK("0000");
-      });
-  }
 
-  return (
-    <div>
-      <h1>Dobrodošli na Dogodkotu!</h1>
-      <p>Vpišite se v svoj uporabniški račun ali pa si ustvarite novega.</p>
+    return (
+      <div>
+        <h1>Dobrodošli na Dogodkotu!</h1>
+        <p>Vpišite se v svoj uporabniški račun ali pa si ustvarite novega.</p>
 
-      <form className='formdiv'>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="button" onClick={HandleSubmit}>Login</button>
-        <p>Ali ste nov uporabnik? <Link to="/register">Registriraj se</Link></p>
-      </form>
-      <img src='mitja_slikar.png' alt="AI-slika"></img>
-    </div>
-  );
+        <form className='formdiv'>
+          <div>
+            <label>Username:</label>
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={geslo}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="button" onClick={handleSubmit}>Login</button> {/* Popravite tukaj */}
+          <p>Ali ste nov uporabnik? <Link to="/register">Registriraj se</Link></p>
+        </form>
+        <img src='mitja_slikar.png' alt="AI-slika"></img>
+        <ToastContainer />
+      </div>
+    );
 }
 
 export default HomePage;

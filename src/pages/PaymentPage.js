@@ -31,7 +31,7 @@ function PaymentPage() {
     return (
         <div className="payment-header">
             {payments.map(payment => (
-                    <div key={payment.ticketID} className="payments-container">
+                    <div key={payment.TransactionID} className="payments-container">
                         <p className="pay-detail"><strong>ID vstopnice:</strong> {payment.TicketID}</p>
                         <p className="pay-detail"><strong>Dan nakupa:</strong> {formatDate(payment.TransactionDate)}</p>
                         <p className="pay-detail"><strong>Cena:</strong> {payment.Amount}</p>

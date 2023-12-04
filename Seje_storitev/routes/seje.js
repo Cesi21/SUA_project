@@ -44,6 +44,26 @@ module.exports = function(db) {
         }
     });
     
+    /**
+    * @swagger
+    * /seje/prijave/{id_user}:
+    *   get:
+    *     summary: Vrne seznam vseh Prijav na seje
+    *     responses:
+    *       200:
+    *         description: Uspešen odziv s seznamom prijav sej
+    *       500:
+    *         description: Napaka na strežniku
+    */
+    router.get('/prijave/:id_user', async (req, res) => {
+        try {
+            const seje = await db.collection('PrijavaSeje').find({ id_user: req.params.id_user}).toArray();
+            res.status(200).json(seje);
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    });
+
 
     /**
     * @swagger
@@ -201,7 +221,7 @@ module.exports = function(db) {
 
     /**
     * @swagger
-    * /prijave:
+    * /seje/prijave:
     *   post:
     *     summary: Dodajanje nove seje
     *     requestBody:
@@ -214,28 +234,17 @@ module.exports = function(db) {
     *               - title
     *               - description 
     *             properties:
-    *               title:
+    *               id_seje:
     *                 type: string
-    *               description:
+    *               id_user:
     *                 type: string
-    *               location:
-    *                 type: string
-    *               start:
-    *                 type: string
-    *               end:
-    *                 type: string
-    *               organizer:
-    *                 type: string
-    *               contact:
-    *                 type: string
-    * 
     *     responses:
     *       201:
     *         description: Seja uspešno dodana
     *       500:
     *         description: Napaka na strežniku
     */
-    router.post('/prijava', async (req, res) => {
+    router.post('/prijave', async (req, res) => {
         console.log("Uspešno dodan dokument");
         try {
             const newSeja = req.body;
@@ -245,9 +254,6 @@ module.exports = function(db) {
             res.status(500).json({ error: err.message });
         }
     });
-
-
-
 
      /**
     * @swagger
@@ -341,5 +347,3 @@ module.exports = function(db) {
 
     return router;
 };
-
-   

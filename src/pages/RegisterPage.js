@@ -9,17 +9,16 @@ function RegisterPage() {
   const [email, setEmail] = useState('');
   const [ime, setIme] = useState('');
   const [priimek, setPri] = useState('');
-  const [vloga, setVloga] = useState('');
-  const [_id, setId] = useState('');
-  const [prijavljeniDogodki, setP] = useState('');
+  const [vloga] = useState('obiskovalec');
+  //const [_id, setId] = useState('');
+  //const [prijavljeniDogodki, setP] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setVloga("obiskovalec");
-    setId("btk");
-    setP("btk");
-    const userData = { _id,ime, priimek,email, geslo, vloga,prijavljeniDogodki };
+    
+    
+    const userData = { ime, priimek,email, geslo, vloga };
     console.log(userData);
     try {
       const response = await fetch('http://localhost:5000/users', {

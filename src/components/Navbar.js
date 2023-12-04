@@ -8,6 +8,7 @@ function Navbar() {
       <Link to="/events">Dogodki</Link>
       <Link to="/tickets">Vstopnice</Link>
       <Link to="/seje">Seje</Link>
+      <Link to="/seje/prijave">Moje Seje</Link>
       <Link to="/obvestila">Obvestila</Link>
       {/*<Link to="/events">Obvestila</Link>
       <Link to="/events">Nastavitve</Link>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './SejePage.css'; // Dodajte to vrstico
-
 //import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function SejePage() {
-    //const navigate = useNavigate();
-    const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
     
+    const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
     const userId = "322632"; // ID uporabnika, za katerega želite pridobiti vstopnice
     
     useEffect(() => {
@@ -26,10 +26,45 @@ function SejePage() {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('sl-SI', options);
     };
-    //const handlePaymentClick = (ticketID) => {
-        // Dodajte tukaj dodatno logiko, če je potrebno
-      //  navigate(`/placilo/${ticketID}`);
-   // };
+
+
+    const [id_seje, setSeja] = useState('');
+    const [id_user, setUser] = useState('');
+
+    const InsertSeja = async (event) => {
+        
+        setSeja(event);
+        const userId = localStorage.getItem("userID");
+        setUser(userId);
+        const userData = { id_seje,id_user };
+        console.log(userData);
+        try {
+          const response = await fetch('http://localhost:3005/seje/prijave', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData),
+          });
+    
+          const data = await response.json();
+    
+          if (response.ok) {
+            toast.success('Prijava uspešna');
+            
+           
+          } else {
+            toast.error(data.message || 'Uporabnik že obstaja ali napaka pri prijavi');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          toast.error('Napaka pri komunikaciji s strežnikom');
+        }
+      };
+
+
+
+    
 
     return (
         <div>
@@ -45,7 +80,7 @@ function SejePage() {
                         <p className="ticket-detail"><strong>Konec:</strong> {formatDate(ticket.end)}</p>
                         <p className="ticket-detail"><strong>Organizator:</strong> {ticket.organizer}</p>
                         <p className="ticket-detail"><strong>Kontakt:</strong> {ticket.contact}</p>
-                        {/*<button onClick={() => handlePaymentClick(ticket._id)}>Prikaži podrobnosti plačila</button>*/}
+                        <button onClick={() => InsertSeja(ticket.title)}>Prijavi se na sejo</button>
                     </div>
                 ))}
             </div>

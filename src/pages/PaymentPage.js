@@ -7,7 +7,7 @@ function PaymentPage() {
     const [payments, setPayment] = useState(null);
     
     useEffect(() => {
-        fetch(`http://localhost:3001/payments/ticket/${ticketID}`, {
+        fetch(`http://localhost:11127/payments/ticket/${ticketID}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

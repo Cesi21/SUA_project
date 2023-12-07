@@ -43,7 +43,7 @@ function EventPage() {
     };
 
     try {
-      const response = await fetch('https://localhost:7069/tickets', {
+      const response = await fetch('https://localhost:11126/tickets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

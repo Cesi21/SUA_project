@@ -10,7 +10,7 @@ app.use(express.json());
 const fetch = require('node-fetch');
 let uporabniki = [];
 async function  pridobiUporabnike () {
-    return fetch('http://localhost:5000/users', {
+    return fetch('http://localhost:11122/users', {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     })
@@ -53,7 +53,7 @@ app.post('/login', async (req, res) => {
             iat: Math.floor(Date.now() / 1000),
             exp: Math.floor(Date.now() / 1000) + (60 * 60) // Veljavnost 1 uro
         },
-        'fak_you' // Uporabite varen način shranjevanja skrivnih ključev
+        'neki' // Uporabite varen način shranjevanja skrivnih ključev
     );
 
     res.json({ token });

@@ -19,3 +19,7 @@ p{
     margin: auto auto auto auto; 
     padding : auto auto auto auto;
 }
+.nova{
+    display: block;
+    margin: auto;
+}

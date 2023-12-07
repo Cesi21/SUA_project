@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function SejePage() {
     
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = "322632"; // ID uporabnika, za katerega želite pridobiti vstopnice
+    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
     
     useEffect(() => {
         fetch(`http://localhost:3005/seje`, {
@@ -54,7 +54,7 @@ function SejePage() {
             
            
           } else {
-            toast.error(data.message || 'Uporabnik že obstaja ali napaka pri prijavi');
+            toast.error(data.message || 'Prijava že obstaja');
           }
         } catch (error) {
           console.error('Error:', error);

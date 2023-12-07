@@ -12,7 +12,9 @@ import TicketPage from './pages/TicketPage';
 import PaymentPage from './pages/PaymentPage';
 import NotificationPage from './pages/NotificationPage';
 import MojeSejePage from './pages/MojeSejePage';
+import ObvestilaPage from './pages/ObvestilaPage';
 function App() {
+  
   return (
     <Router>
       <Navbar />
@@ -23,7 +25,8 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/tickets" element={<TicketPage />} />
         <Route path="/seje" element={<SejePage/>} />
-        <Route path="/obvestila" element={<NotificationPage/>} />
+        <Route path="/odjava" element={<NotificationPage/>} />
+        <Route path="/obvestila" element={<ObvestilaPage/>} />
         <Route path="/seje/prijave" element={<MojeSejePage/>} />
         <Route path="/placilo/:ticketID" element={<PaymentPage/>} />
         {/* Dodajte dodatne poti tukaj */}

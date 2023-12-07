@@ -10,6 +10,8 @@ function Navbar() {
       <Link to="/seje">Seje</Link>
       <Link to="/seje/prijave">Moje Seje</Link>
       <Link to="/obvestila">Obvestila</Link>
+      <Link to="/odjava">Odjava</Link>
+      
       {/*<Link to="/events">Obvestila</Link>
       <Link to="/events">Nastavitve</Link>
       <Link to="/events">Odjava</Link>

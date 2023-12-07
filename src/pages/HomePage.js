@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'; // Dodajte ta uvoz
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
-
+import './HomePage.css';
  let res = 0;
 function HomePage() {
     const navigate = useNavigate();
@@ -46,15 +46,15 @@ function HomePage() {
         }
     };
 
-
+    if(localStorage.getItem('jwtToken') === "null"){
     return (
       <div>
-        <h1>Dobrodošli na Dogodkotu!</h1>
-        <p>Vpišite se v svoj uporabniški račun ali pa si ustvarite novega.</p>
+        <h1 className='nova'>Dobrodošli na Dogodkotu!</h1>
+        <p className='nova'>Vpišite se v svoj uporabniški račun ali pa si ustvarite novega.</p>
 
         <form className='formdiv'>
           <div>
-            <label>Username:</label>
+            <label>Email:</label>
             <input
               type="text"
               value={email}
@@ -75,7 +75,14 @@ function HomePage() {
         <img src='mitja_slikar.png' alt="AI-slika"></img>
         <ToastContainer />
       </div>
-    );
+    );}else{
+      return (
+        <div>
+          <h1>Dobrodošli na Dogodkotu!</h1>
+          </div>
+          )
+
+    }
 }
 
 export default HomePage;

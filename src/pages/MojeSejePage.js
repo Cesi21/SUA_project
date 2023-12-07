@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function MojeSejePage() {
 
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = "string8"; // ID uporabnika, za katerega želite pridobiti vstopnice
+    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
 
     useEffect(() => {
         fetch(`http://localhost:3005/seje/prijave/${userId}`, {

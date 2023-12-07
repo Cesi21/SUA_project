@@ -8,7 +8,7 @@ function TicketPage() {
     const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
     //console.log(userId);
     useEffect(() => {
-        fetch(`https://localhost:7069/tickets/user/${userId}`, {
+        fetch(`http://localhost:11126/tickets/user/${userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

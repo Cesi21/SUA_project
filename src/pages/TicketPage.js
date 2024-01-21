@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import './TicketPage.css'; // Dodajte to vrstico
+import './TicketPage.css';
 import { useNavigate } from 'react-router-dom';
 
 function TicketPage() {
     const navigate = useNavigate();
-    const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
-    //console.log(userId);
+    const [tickets, setTickets] = useState([]);
+    const userId = localStorage.getItem("userID");
+    const jwtToken = localStorage.getItem("jwtToken"); // Pridobi JWT token iz local storage
+
     useEffect(() => {
         fetch(`http://localhost:11126/tickets/user/${userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                
+                'Authorization': `Bearer ${jwtToken}` // Dodaj JWT token v zahtevo
             },
         })
-            .then(response => response.json())
-            .then(data => setTickets(data))
-            .catch(error => console.error('Error:', error));
-    }, [userId]);
+        .then(response => response.json())
+        .then(data => setTickets(data))
+        .catch(error => console.error('Error:', error));
+    }, [userId, jwtToken]); // Dodaj jwtToken kot odvisnost za useEffect
 
     const formatDate = (dateString) => {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(dateString).toLocaleDateString('sl-SI', options);
     };
+
     const handlePaymentClick = (ticketID) => {
-        // Dodajte tukaj dodatno logiko, če je potrebno
         navigate(`/placilo/${ticketID}`);
     };
+
 
     return (
         <div>

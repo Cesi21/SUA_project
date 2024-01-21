@@ -14,7 +14,7 @@ function HomePage() {
 
     const handleSubmit = async () => { // Popravite ime funkcije tukaj
         try {
-            const response = await fetch('http://localhost:5500/login', {
+            const response = await fetch('http://localhost:11120/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

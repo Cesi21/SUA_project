@@ -1,6 +1,25 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
-//const ObjectId = require('mongodb').ObjectId;
+
+// JWT Verification Middleware
+function verifyToken(req, res, next) {
+    const bearerHeader = req.headers['authorization'];
+    if (typeof bearerHeader !== 'undefined') {
+        const bearerToken = bearerHeader.split(' ')[1];
+        
+        jwt.verify(bearerToken, 'neki', (err, authData) => {
+            if (err) {
+                res.sendStatus(403); // Forbidden
+            } else {
+                req.authData = authData;
+                next();
+            }
+        });
+    } else {
+        res.sendStatus(401); // Unauthorized
+    }
+}
 
 module.exports = function(db) {
     const collection = db.collection('Payments');
@@ -16,9 +35,9 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/', async (req, res) => {
+    router.get('/', verifyToken, async (req, res) => {
         try {
-            const payments = await db.collection('Payments').find().toArray();
+            const payments = await collection.find().toArray();
             res.status(200).json(payments);
         } catch (err) {
             res.status(500).json({ error: err.message });
@@ -45,9 +64,9 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/:PaymentID', async (req, res) => {
+    router.get('/:PaymentID', verifyToken, async (req, res) => {
         try {
-            const payment = await db.collection('Payments').findOne({ PaymentID: req.params.PaymentID});
+            const payment = await collection.findOne({ PaymentID: req.params.PaymentID });
             if (!payment) {
                 return res.status(404).json({ error: 'Placilo ni bilo najdeno' });
             }
@@ -85,11 +104,11 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.post('/', async (req, res) => {
+    router.post('/', verifyToken, async (req, res) => {
         console.log("Uspešno dodan dokument");
         try {
             const newPayment = req.body;
-            await db.collection('Payments').insertOne(newPayment);
+            await collection.insertOne(newPayment);
             res.status(201).json(newPayment);
         } catch (err) {
             res.status(500).json({ error: err.message });
@@ -126,10 +145,10 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.put('/:PaymentID', async (req, res) => {
+    router.put('/:PaymentID', verifyToken, async (req, res) => {
         try {
             const updatedPayment = req.body;
-            const result = await db.collection('Payments').replaceOne({ PaymentID: req.params.PaymentID }, updatedPayment);
+            const result = await collection.replaceOne({ PaymentID: req.params.PaymentID }, updatedPayment);
             if (result.modifiedCount === 0) {
                 return res.status(404).json({ error: 'Plačilo ni bilo najdeno' });
             }
@@ -138,6 +157,7 @@ module.exports = function(db) {
             res.status(500).json({ error: err.message });
         }
     });
+    
 
     /**
     * @swagger
@@ -159,9 +179,9 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.delete('/:PaymentID', async (req, res) => {
+    router.delete('/:PaymentID', verifyToken, async (req, res) => {
         try {
-            const result = await db.collection('Payments').deleteOne({ PaymentID: req.params.PaymentID });
+            const result = await collection.deleteOne({ PaymentID: req.params.PaymentID });
             if (result.deletedCount === 0) {
                 return res.status(404).json({ error: 'Plačilo ni bilo najdeno' });
             }
@@ -170,6 +190,7 @@ module.exports = function(db) {
             res.status(500).json({ error: err.message });
         }
     });
+
     /**
     * @swagger
     * /payments/user/{userId}:
@@ -188,14 +209,15 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/user/:UserID', async (req, res) => {
-        try {
-            const payments = await db.collection('Payments').find({ UserID: req.params.UserID }).toArray();
-            res.status(200).json(payments);
-        } catch (err) {
-            res.status(500).json({ error: err.message });
-        }
+    router.get('/user/:UserID', verifyToken, async (req, res) => {
+    try {
+        const payments = await db.collection('Payments').find({ UserID: req.params.UserID }).toArray();
+        res.status(200).json(payments);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
     });
+
     /**
     * @swagger
     * /payments/ticket/{TicketID}:
@@ -214,7 +236,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/ticket/:TicketID', async (req, res) => {
+    router.get('/ticket/:TicketID', verifyToken, async (req, res) => {
         try {
             const payments = await db.collection('Payments').find({ TicketID: req.params.TicketID }).toArray();
             res.status(200).json(payments);
@@ -241,7 +263,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/event/:EventID', async (req, res) => {
+    router.get('/event/:EventID', verifyToken, async (req, res) => {
         try {
             const payments = await db.collection('Payments').find({ EventID: req.params.EventID }).toArray();
             res.status(200).json(payments);
@@ -268,9 +290,8 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/status/:Status', async (req, res) => {
+    router.get('/status/:Status', verifyToken, async (req, res) => {
         try {
-            
             const payments = await db.collection('Payments').find({ Status: req.params.Status }).toArray();
             res.status(200).json(payments);
         } catch (err) {

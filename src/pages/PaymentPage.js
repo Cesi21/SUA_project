@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import './PaymentPage.css'; // Ustvarite CSS datoteko za stiliranje, če želite
+import './PaymentPage.css';
 
 function PaymentPage() {
     const { ticketID } = useParams();
     const [payments, setPayment] = useState(null);
     
     useEffect(() => {
+  
+        const jwtToken = localStorage.getItem('jwtToken');
+
         fetch(`http://localhost:11127/payments/ticket/${ticketID}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                
+     
+                'Authorization': `Bearer ${jwtToken}`
             },
         })
-            .then(response => response.json())
-            .then(data => setPayment(data))
-            .catch(error => console.error('Error:', error));
+        .then(response => response.json())
+        .then(data => setPayment(data))
+        .catch(error => console.error('Error:', error));
     }, [ticketID]);
 
     const formatDate = (dateString) => {

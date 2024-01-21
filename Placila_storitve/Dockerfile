@@ -1,5 +1,5 @@
 # Uporabite uradno Node.js osnovno sliko z določeno verzijo Node.js
-FROM node:latest
+FROM node:21-slim
 
 # Nastavite delovni direktorij v kontejnerju
 WORKDIR /usr/src/app

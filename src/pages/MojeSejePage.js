@@ -8,19 +8,21 @@ function MojeSejePage() {
 
     const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
     const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
+    const jwtToken = localStorage.getItem("jwtToken"); // Pridobi JWT token iz local storage
 
     useEffect(() => {
         fetch(`http://localhost:3005/seje/prijave/${userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${jwtToken}`
 
             },
         })
             .then(response => response.json())
             .then(data => setTickets(data))
             .catch(error => console.error('Error:', error));
-    }, [userId]);
+    }, [userId, jwtToken]);
 
 
     return (

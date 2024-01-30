@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cfr2JR3Cvr2lTMOVGUZq7sYf+zxC4r1t7b+t62alhXKGEGqHx1gWutgGD0LnW3D6V1eFH6etoR/POLFxEKusUA==",
+  "dgSpecHash": "/9yVDhORR/bubCo+enT6wcgC5kvHzLJHqqmc+Xh35JZBHDUPTeQpf+Yx71/zwDVeawsABMajqdFN4v++Bc1XTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mitja\\Desktop\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
+  "projectFilePath": "C:\\Users\\mitja\\Desktop\\SUA\\SUA_neki\\SUA_proejct\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mitja\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\mitja\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

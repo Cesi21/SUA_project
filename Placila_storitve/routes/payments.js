@@ -1,13 +1,35 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb+srv://cesi:2314@ptscluster.gkdlocr.mongodb.net/?retryWrites=true&w=majority'; // Nastavite vašo MongoDB povezavo
+const dbName = 'suacesar2'; // Ime vaše MongoDB baze
+const collectionName = 'Payments'; // Ime vaše MongoDB kolekcije
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
+// Funkcija za spremembo ključev v dokumentu
+function capitalizeKeys(obj) {
+    let newObj = {};
+    for (let key in obj) {
+        let capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+        newObj[capitalizedKey] = obj[key];
+    }
+    return newObj;
+}
+
+// Povežemo se z MongoDB bazo
+async function neki() {
+    await client.connect();
+const db = client.db(dbName);
+const collection = db.collection(collectionName);
+}
+neki();
 // JWT Verification Middleware
 function verifyToken(req, res, next) {
     const bearerHeader = req.headers['authorization'];
     if (typeof bearerHeader !== 'undefined') {
         const bearerToken = bearerHeader.split(' ')[1];
-        
+
         jwt.verify(bearerToken, 'neki', (err, authData) => {
             if (err) {
                 res.sendStatus(403); // Forbidden
@@ -104,12 +126,18 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.post('/', verifyToken, async (req, res) => {
+    router.post('/', async (req, res) => {
         console.log("Uspešno dodan dokument");
         try {
             const newPayment = req.body;
+            // Najprej vstavimo dokument
             await collection.insertOne(newPayment);
-            res.status(201).json(newPayment);
+    
+            // Spremenimo ključe in posodobimo dokument
+            let updatedPayment = capitalizeKeys(newPayment);
+            await collection.updateOne({ _id: newPayment._id }, { $set: updatedPayment });
+    
+            res.status(201).json(updatedPayment);
         } catch (err) {
             res.status(500).json({ error: err.message });
         }
@@ -236,7 +264,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/ticket/:TicketID', verifyToken, async (req, res) => {
+    router.get('/ticket/:TicketID', async (req, res) => {
         try {
             const payments = await db.collection('Payments').find({ TicketID: req.params.TicketID }).toArray();
             res.status(200).json(payments);

@@ -1,6 +1,29 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 const ObjectId = require('mongodb').ObjectId;
+
+
+// JWT Verification Middleware
+function verifyToken(req, res, next) {
+    const bearerHeader = req.headers['authorization'];
+    if (typeof bearerHeader !== 'undefined') {
+        const bearerToken = bearerHeader.split(' ')[1];
+        
+        jwt.verify(bearerToken, 'neki', (err, authData) => {
+            if (err) {
+                res.sendStatus(403); // Forbidden
+            } else {
+                req.authData = authData;
+                next();
+            }
+        });
+    } else {
+        res.sendStatus(401); // Unauthorized
+    }
+}
+
+
 
 module.exports = function(db) {
     const collection = db.collection('Seje');
@@ -15,7 +38,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/', async (req, res) => {
+    router.get('/', verifyToken, async (req, res) => {
         try {
             const seje = await db.collection('Seje').find().toArray();
             res.status(200).json(seje);
@@ -35,7 +58,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/prijave', async (req, res) => {
+    router.get('/prijave', verifyToken, async (req, res) => {
         try {
             const seje = await db.collection('PrijavaSeje').find().toArray();
             res.status(200).json(seje);
@@ -55,7 +78,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.get('/prijave/:id_user', async (req, res) => {
+    router.get('/prijave/:id_user', verifyToken, async (req, res) => {
         try {
             const seje = await db.collection('PrijavaSeje').find({ id_user: req.params.id_user}).toArray();
             res.status(200).json(seje);
@@ -86,7 +109,7 @@ module.exports = function(db) {
     *         description: Napaka na strežniku
     */
 
-    router.get('/title/:title', async (req, res) => {
+    router.get('/title/:title', verifyToken, async (req, res) => {
         try {
             const seja = await db.collection('Seje').findOne({ title: req.params.title});
             if (!seja) {
@@ -120,7 +143,7 @@ module.exports = function(db) {
     *         description: Napaka na strežniku
     */
 
-    router.get('/location/:location', async (req, res) => {
+    router.get('/location/:location', verifyToken, async (req, res) => {
         try {
             const seja = await db.collection('Seje').findOne({ location: req.params.location});
             if (!seja) {
@@ -154,7 +177,7 @@ module.exports = function(db) {
     *         description: Napaka na strežniku
     */
 
-    router.get('/organizer/:organizer', async (req, res) => {
+    router.get('/organizer/:organizer', verifyToken, async (req, res) => {
         try {
             const seja = await db.collection('Seje').findOne({ organizer: req.params.organizer});
             if (!seja) {
@@ -208,7 +231,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.post('/', async (req, res) => {
+    router.post('/', verifyToken, async (req, res) => {
         console.log("Uspešno dodan dokument");
         try {
             const newSeja = req.body;
@@ -244,7 +267,7 @@ module.exports = function(db) {
     *       500:
     *         description: Napaka na strežniku
     */
-    router.post('/prijave', async (req, res) => {
+    router.post('/prijave', verifyToken, async (req, res) => {
         console.log("Uspešno dodan dokument");
         try {
             const newSeja = req.body;
@@ -298,7 +321,7 @@ module.exports = function(db) {
     *         description: Napaka na strežniku
     */
 
-    router.put('/:title', async (req, res) => {
+    router.put('/:title', verifyToken, async (req, res) => {
         try {
             const updatedSeja = req.body;
             const result = await db.collection('Seje').replaceOne({ title: req.params.title }, updatedSeja);
@@ -333,7 +356,7 @@ module.exports = function(db) {
     *         description: Napaka na strežniku
     */
 
-    router.delete('/:title', async (req, res) => {
+    router.delete('/:title', verifyToken, async (req, res) => {
         try {
             const result = await db.collection('Seje').deleteOne({ title: req.params.title });
             if (result.deletedCount === 0) {
@@ -347,3 +370,5 @@ module.exports = function(db) {
 
     return router;
 };
+
+   

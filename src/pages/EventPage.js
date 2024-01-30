@@ -12,7 +12,7 @@ function EventPage() {
   const [events, setEvents] = useState([]); 
   
   useEffect(() => {
-    fetch(`http://localhost:5025/dogodki`, {
+    fetch(`http://localhost:11120/dogodki`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function EventPage() {
     const userData = { 
    
       
-      TicketID: eventIDX + "12345", // Uporabite velike začetnice, če je to potrebno
+      TicketID: eventIDX + "123456", // Uporabite velike začetnice, če je to potrebno
     EventID: eventIDX, // Uporabite velike začetnice, če je to potrebno
     UserID: userID, // Uporabite velike začetnice, če je to potrebno
     PurchaseDate: new Date().toISOString(), // Preverite, ali je to pravi format
@@ -43,7 +43,7 @@ function EventPage() {
     };
 
     try {
-      const response = await fetch('https://localhost:11126/tickets', {
+      const response = await fetch('http://localhost:11126/tickets', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

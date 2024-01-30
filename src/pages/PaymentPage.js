@@ -8,14 +8,12 @@ function PaymentPage() {
     
     useEffect(() => {
   
-        const jwtToken = localStorage.getItem('jwtToken');
+        //const jwtToken = localStorage.getItem('jwtToken');
 
         fetch(`http://localhost:11127/payments/ticket/${ticketID}`, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
-     
-                'Authorization': `Bearer ${jwtToken}`
+                'Content-Type': 'application/json'
             },
         })
         .then(response => response.json())

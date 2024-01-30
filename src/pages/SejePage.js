@@ -39,11 +39,13 @@ function SejePage() {
         setUser(userId);
         const userData = { id_seje,id_user };
         console.log(userData);
+        const jwtToken = localStorage.getItem("jwtToken");
         try {
           const response = await fetch('http://localhost:3005/seje/prijave', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              'Authorization': `Bearer ${jwtToken}`
             },
             body: JSON.stringify(userData),
           });

@@ -1348,11 +1348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mitja\\Desktop\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mitja\\Desktop\\SUA\\SUA_neki\\SUA_proejct\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
       "projectName": "ObvestilaAPI",
-      "projectPath": "C:\\Users\\mitja\\Desktop\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
+      "projectPath": "C:\\Users\\mitja\\Desktop\\SUA\\SUA_neki\\SUA_proejct\\ObvestilaAPI\\ObvestilaAPI\\ObvestilaAPI.csproj",
       "packagesPath": "C:\\Users\\mitja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mitja\\Desktop\\ObvestilaAPI\\ObvestilaAPI\\obj\\",
+      "outputPath": "C:\\Users\\mitja\\Desktop\\SUA\\SUA_neki\\SUA_proejct\\ObvestilaAPI\\ObvestilaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mitja\\AppData\\Roaming\\NuGet\\NuGet.Config",

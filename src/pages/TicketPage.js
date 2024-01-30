@@ -7,13 +7,15 @@ function TicketPage() {
     const [tickets, setTickets] = useState([]);
     const userId = localStorage.getItem("userID");
     const jwtToken = localStorage.getItem("jwtToken"); // Pridobi JWT token iz local storage
+    
+    
 
     useEffect(() => {
         fetch(`http://localhost:11126/tickets/user/${userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${jwtToken}` // Dodaj JWT token v zahtevo
+                'Authorization': `Bearer ${jwtToken}`, // Dodaj JWT token v zahtevo
             },
         })
         .then(response => response.json())

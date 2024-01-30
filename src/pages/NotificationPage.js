@@ -4,7 +4,7 @@ import React from 'react';
 //import { useNavigate } from 'react-router-dom';
 function NotificationPage() {
   //const navigate = useNavigate();
-  let  id  = 0; // Gets the event ID from the URL
+  let  id  = 0; 
   if(localStorage.getItem('jwtToken') === "null"){
     id = 1;
   }else{

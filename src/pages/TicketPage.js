@@ -6,7 +6,7 @@ function TicketPage() {
     const navigate = useNavigate();
     const [tickets, setTickets] = useState([]);
     const userId = localStorage.getItem("userID");
-    const jwtToken = localStorage.getItem("jwtToken"); // Pridobi JWT token iz local storage
+    const jwtToken = localStorage.getItem("jwtToken");
     
     
 
@@ -15,13 +15,13 @@ function TicketPage() {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${jwtToken}`, // Dodaj JWT token v zahtevo
+                'Authorization': `Bearer ${jwtToken}`, 
             },
         })
         .then(response => response.json())
         .then(data => setTickets(data))
         .catch(error => console.error('Error:', error));
-    }, [userId, jwtToken]); // Dodaj jwtToken kot odvisnost za useEffect
+    }, [userId, jwtToken]);
 
     const formatDate = (dateString) => {
         const options = { day: '2-digit', month: '2-digit', year: 'numeric' };

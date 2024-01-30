@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');  // Dodajte to vrstico
+const cors = require('cors');  
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');

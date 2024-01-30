@@ -6,8 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function SejePage() {
     
-    const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
+    const [tickets, setTickets] = useState([]); 
+    const userId = localStorage.getItem("userID"); 
     const jwtToken = localStorage.getItem("jwtToken");
     useEffect(() => {
         fetch(`http://localhost:3005/seje`, {

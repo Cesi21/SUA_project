@@ -29,7 +29,6 @@ function App() {
         <Route path="/obvestila" element={<ObvestilaPage/>} />
         <Route path="/seje/prijave" element={<MojeSejePage/>} />
         <Route path="/placilo/:ticketID" element={<PaymentPage/>} />
-        {/* Dodajte dodatne poti tukaj */}
       </Routes>
       <Footer />
     </Router>

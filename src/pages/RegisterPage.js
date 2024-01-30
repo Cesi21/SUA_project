@@ -33,7 +33,7 @@ function RegisterPage() {
 
       if (response.ok) {
         toast.success('Registracija uspešna');
-        navigate('/'); // Preusmeritev na prijavno stran
+        navigate('/'); 
       } else {
         toast.error(data.message || 'Uporabnik že obstaja ali napaka pri registraciji');
       }

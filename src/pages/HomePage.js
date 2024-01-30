@@ -12,7 +12,7 @@ function HomePage() {
     const [geslo, setPassword] = useState('');
     
 
-    const handleSubmit = async () => { // Popravite ime funkcije tukaj
+    const handleSubmit = async () => { 
         try {
             const response = await fetch('http://localhost:5500/login', {
                 method: 'POST',
@@ -69,7 +69,7 @@ function HomePage() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="button" onClick={handleSubmit}>Login</button> {/* Popravite tukaj */}
+          <button type="button" onClick={handleSubmit}>Login</button> 
           <p>Ali ste nov uporabnik? <Link to="/register">Registriraj se</Link></p>
         </form>
         <img src='mitja_slikar.png' alt="AI-slika"></img>

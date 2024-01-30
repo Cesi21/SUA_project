@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './MojeSejePage.css'; // Dodajte to vrstico
+import './MojeSejePage.css'; 
 //import { useNavigate } from 'react-router-dom';
 //import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ObvestilaPage() {
 
-    const [tickets, setTickets] = useState([]); // Stanje za shranjevanje podatkov o vstopnicah
-    const userId = localStorage.getItem("userID"); // ID uporabnika, za katerega želite pridobiti vstopnice
+    const [tickets, setTickets] = useState([]); 
+    const userId = localStorage.getItem("userID");
 
     useEffect(() => {
         fetch(`http://localhost:11124/notification`, {

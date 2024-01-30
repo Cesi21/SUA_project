@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# This development app, which is used for looking up events, buying tickets and applying to seminars. Inside the main project are multiple other projects that are used as micro services, each microservice has its own # # MongoDB database. There are 7 services in total. Some of them are here in the project folder and some are on docker.hub:
+# This app is used for looking up events, buying tickets and applying to seminars. Inside the main project are multiple other projects that are used as micro services, each microservice has its own # # MongoDB database. There are 7 services in total. Some of them are here in the project folder and some are on docker.hub:
 
 # cesi212314/placila
 # cesi212314/vstopnice
